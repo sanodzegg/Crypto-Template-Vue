@@ -1,0 +1,20 @@
+[
+    {
+        "type": "basic",
+        "cost": 9,
+        "description": "Lorem ipsum dolor sit amet, ametor consectetur adipiscing elit. Et nibh.",
+        "features": ["Trading up to $100K per month", "Send and receive over 85 tokens", "Real time crypto trading", "iOS and Android App"]
+    },
+    {
+        "type": "pro",
+        "cost": 18,
+        "description": "Lorem ipsum dolor sit amet, ametor consectetur adipiscing elit. Et nibh.",
+        "features": ["Everything included in Basic", "Trading up to $1MM per month", "Windows & macOS App", "Premium Support"]
+    },
+    {
+        "type": "expert",
+        "cost": 99,
+        "description": "Lorem ipsum dolor sit amet, ametor consectetur adipiscing elit. Et nibh.",
+        "features": ["Everything included in Expert", "Trading up to $10MM per month", "Windows & macOS App", "Dedicated Support"]
+    }
+]

@@ -1,0 +1,407 @@
+@import variables
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap')
+
+body
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    background-color: $mainbg
+
+    h1,h2,h3,h4,h5,h6,span,p,strong,li,a,ul
+        margin: 0
+        padding: 0
+
+        font-family: 'Poppins', sans-serif
+        color: $mainfont
+
+    button
+        font-family: 'Poppins', sans-serif
+        color: $mainfont
+
+    nav
+        width: 1200px
+        max-width: 100%
+        margin: 0 auto
+
+    .navbar
+        @include flex-between
+        padding: 33px 0
+        font-size: $navfont
+        font-weight: 500
+        .navbar__l
+            display: flex
+            align-items: center
+            li, a
+                display: inline-block
+                @include reset-list
+                padding: 0 7.5px
+                transition: .2s
+            li:hover
+                color: $mainbtn
+            .navbar__hr
+                margin: 0 2.5vw
+                width: 1px
+                background-color: $mainfont
+                padding: 33px 0
+            .navbar__logo
+                transition: all 1s
+            .navbar__logo:hover
+                transform: scale(.97)
+                cursor: pointer
+        .navbar__r
+            @include flex-center
+            span, button
+                text-transform: uppercase
+                color: $defaultfont
+                font-size: $navfont
+                cursor: pointer
+            button
+                @include default-button
+            button:hover
+                transition: .3s
+                background-color: $btnhover
+                transform: scale(.97)
+    .top__section
+        width: 100%
+        max-width: 1200px
+        margin: 0 auto
+        .top__above
+            margin-top: 105px
+            h1
+                opacity: 0
+                font-weight: 700
+                font-size: 66px
+                line-height: 1.2em
+                color: $fontbig
+                max-width: 47rem
+                color: #FFFFFF
+            p
+                font-size: $fontdef
+                line-height: 1.7em
+                max-width: 38rem
+            #topBtns
+                opacity: 0
+            button
+                @include default-button
+                text-transform: uppercase
+                margin: 40px 0
+                font-size: $btnfont
+                transition: .3s
+                padding: 20px 32px
+            button:first-child:hover
+                background-color: $btnhover
+                transform: scale(.97)
+            button:nth-child(2)
+                margin-left: 20px
+                background-color: $btnhover
+            button:nth-child(2):hover
+                background-color: $mainbtn
+                transform: scale(.97)
+        .top__below
+            position: relative
+            margin-top: 40px
+            .laptop__img
+                width: 100%
+                max-width: 1161px
+                opacity: 0
+            .phone__img
+                width: 100%
+                max-width: 256px
+                position: absolute
+                left: 85.5%
+                top: 17.5%
+                transform: translate(-24.5%, -46.5%)
+                opacity: 0
+        .top__section-footer
+            width: 100%
+            max-width: 1200px
+            padding: 34px 0
+            .company__wrapper
+                p
+                    margin-bottom: 34px
+                    text-align: center
+                    font-weight: 400
+                    font-size: $fontdef
+                    line-height: 1.7em
+    .mid__section
+        text-align: center
+        width: 100%
+        max-width: 1200px
+        margin: 0 auto
+        .mid__grid-wrapper
+            text-align: initial
+            opacity: 0
+        button
+            @include default-button
+            text-transform: uppercase
+            font-weight: 700
+            padding: 25px 53px
+            margin-top: 50px
+            color: $defaultfont
+            font-size: $fontdef
+            transition: .3s
+            line-height: 1em
+        button:hover
+            background-color: $btnhover
+            transform: scale(.97)
+    .footer__section
+        margin-top: 50px
+        background-color: $btnhover
+        padding: 56px 0 32px 0
+        .footer__wrapper
+            .footer__mid
+                .mid__r
+                    button
+                        @include default-button
+                        padding: 16px 28px
+                        text-transform: uppercase
+                        font-size: $btnfont
+                        font-weight: 700
+                        color: $defaultfont
+                        background-position-x: 15px
+                        padding-left: 60px
+                    #appstore
+                        margin-left: 0
+                        background: url("../social/appstore.svg") no-repeat $mainbtn left 12px
+                        transition: .3s
+                        background-position-x: 20px
+                    #pstore
+                        background: url("../social/playstore.svg") no-repeat $mainbtn left 15px
+                        transition: .3s
+                        background-position-x: 20px
+                    #appstore:hover
+                        background: url("../social/appstore.svg") no-repeat $btnhover left 12px
+                        background-position-x: 20px
+                        transform: scale(.97)
+                    #pstore:hover
+                        background: url("../social/playstore.svg") no-repeat $btnhover left 15px
+                        background-position-x: 20px
+                        transform: scale(.97)
+    .social__wrapper
+        display: flex
+        justify-content: space-evenly
+        align-items: center
+        .social__icon
+            position: relative
+            margin: 0 5px
+            background-color: #635F94
+            height: 40px
+            width: 40px
+            border-radius: 50%
+            transition: bottom .3s ease-in-out
+            bottom: 0
+            img
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+        .social__icon:hover
+            bottom: 5px
+            background-color: #6639E4
+            cursor: pointer
+    .about__top
+        width: 100%
+        max-width: 1200px
+        margin: 0 auto
+        margin-bottom: 116px
+        .about__top-header
+            text-align: center
+            h1
+                font-size: $fontbig
+                color: $defaultfont
+                margin-top: 60px
+            p
+                font-size: $fontdef
+                margin: 0 auto
+                width: 600px
+                line-height: 1.7em
+        .about__top-heading
+            @include flex-between
+            margin-top: 100px
+            margin-bottom: 29px
+            h2
+                font-size: 42px
+                color: $defaultfont
+            p
+                font-size: $fontdef
+                width: 500px
+                line-height: 1.7em
+        .about__top-grid
+            display: grid
+            grid-template-columns: repeat(auto-fill, 585px)
+            gap: 30px
+            .grid__child
+                background-color: #292455
+                border-radius: 40px
+                padding: 58px 32px
+                @include flex-evenly
+        .grid__child-logo
+            min-width: 68px
+            height: 68px
+            background-color: $mainbtn
+            border-radius: 20px
+            position: relative
+            img
+                @include absolute-center
+        .grid__child-text
+            margin-left: 20px
+            h3
+                text-transform: uppercase
+                font-size: $fontdef
+                color: $defaultfont
+                padding-bottom: 8px
+            p
+                font-size: $fontdef
+                width: 420px
+    .about__mid
+        width: 100%
+        max-width: 1200px
+        margin: 0 auto
+        .mid__above
+            @include flex-between
+            align-items: flex-start
+            margin-bottom: 170px
+            .mid__l
+                opacity: 0
+                #text__wrapper
+                    h2
+                        font-size: 42px
+                        padding-bottom: 16px
+                        color: $defaultfont
+                    p
+                        font-size: $fontdef
+                        width: 612px
+                    p:nth-child(3)
+                        margin-top: 40px
+                #text__wrapper:nth-child(2)
+                    margin-top: 120px
+            .mid__r
+                opacity: 0
+                .mid__image
+                    max-width: 715px
+        .mid__below
+            margin: 110px 0
+            @include flex-between
+            align-items: flex-start
+            .mid__below-l
+                opacity: 0
+                h2
+                    font-size: 42px
+                    color: $defaultfont
+                    text-transform: capitalize
+                    padding-bottom: 28px
+                p
+                    font-size: $fontdef
+                    width: 395px
+            .mid__below-r
+                opacity: 0
+                .timeline__wrapper
+                    position: relative
+                    h1
+                        font-size: 28px
+                        color: $defaultfont
+                        padding-bottom: 28px
+                    h3
+                        text-transform: uppercase
+                        padding-bottom: 8px
+                        color: $defaultfont
+                    p
+                        width: 605px
+                    hr
+                        margin: 60px 0
+                        border: .5px solid $mainfont
+                        opacity: .2
+                .timeline__wrapper::before
+                    content: ''
+                    position: absolute
+                    left: -54px
+                    top: 7px
+                    width: 24px
+                    height: 24px
+                    background-color: $defaultfont
+                    border-radius: 50%
+    .user__section
+        max-width: 1200px
+        width: 100%
+        margin: 0 auto
+        padding: 110px 0 70px 0
+        .user__section-head
+            @include flex-between
+            padding-bottom: 50px
+            h2
+                font-size: 42px
+                text-transform: capitalize
+                color: $defaultfont
+            p
+                font-size: $fontdef
+                width: 550px
+                line-height: 1.7em
+        .about__team-wrapper
+            opacity: 0
+            @include flex-between
+            .about__team-wrapper-child
+                border-radius: 40px
+                padding: 44px 25px
+                background-color: #282555
+                transition: all .3s
+            .about__team-wrapper-child:hover
+                transform: scale(.97)
+    .investors__section
+        padding: 70px 0 140px 0
+        width: 100%
+        max-width: 1200px
+        margin: 0 auto
+        text-align: center
+        h2
+            padding-bottom: 16px
+            font-size: 42px
+            line-height: 1.3em
+            color: $defaultfont
+        p
+            font-size: 18px
+            line-height: 1.7em
+            width: 550px
+            margin: 0 auto
+            margin-bottom: 70px
+    .pricing__top
+        width: 100%
+        max-width: 1200px
+        margin: 0 auto
+        text-align: center
+        h1
+            font-size: $fontbig
+            color: $defaultfont
+            margin-top: 60px
+            margin-bottom: 10px
+        p
+            font-size: $fontdef
+            margin: 0 auto
+            width: 600px
+            line-height: 1.7em
+        .pricing__top-flex
+            @include flex-between
+            margin: 25px 0 0 0
+            .pricing__top-child
+                @include flex-center
+                .svg__wrapper
+                    border-radius: 20px
+                    padding: 35px
+                    width: fit-content
+                    position: relative
+                    background-color: #6738E4
+                    img
+                        @include absolute-center
+                h1
+                    margin: 0
+                    font-size: $fontdef
+                    line-height: 1.2em
+                    color: $defaultfont
+                    text-transform: uppercase
+                    margin-left: 18px
+    .pricing__cards
+        max-width: 1200px
+        width: 100%
+        margin: 0 auto
+        padding: 40px 0 75px 0
+        @include flex-between

@@ -1,0 +1,47 @@
+//vars
+$mainbg: #131029
+$mainfont: #e0dff1
+$defaultfont: #ffffff
+$mainbtn: #6639E4
+$btnhover: #282454
+
+$fontbig: 66px
+$fontdef: 18px
+$btnfont: 16px
+$navfont: 14px
+//mixins
+@mixin flex-center
+    display: flex
+    justify-content: center
+    align-items: center
+@mixin flex-between
+    display: flex
+    justify-content: space-between
+    align-items: center
+@mixin flex-evenly
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+@mixin reset-list
+    margin: 0
+    padding: 0
+    list-style: none
+@mixin default-button
+    background-color: $mainbtn
+    padding: 15px 22px
+    color: $mainfont
+    border-radius: 80px
+    border: unset
+    cursor: pointer
+    margin-left: 20px
+    font-weight: 500
+@mixin absolute-center
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+@mixin absolute-custom($left, $top)
+    position: absolute
+    left: $left
+    top: $top
+    transform: translate(-(100%-$left), -(100%-$top))
