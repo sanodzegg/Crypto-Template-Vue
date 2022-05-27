@@ -1,28 +1,30 @@
 <script>
-    import PlanComp from "@/components/PlanComp.vue"
+    import PlanComp from "@/components/Pricing/PlanComp.vue"
     import FooterComp from "@/components/FooterComp.vue"
     import plans from "@/assets/mockingdata/plans.json"
+    import { mapGetters } from "vuex";
 
     import { gsap } from "gsap";
     import { ScrollTrigger } from "gsap/ScrollTrigger"
-    gsap.registerPlugin(ScrollTrigger);
 
-    import { cardData } from "@/components/PlanComp.vue"
+    gsap.registerPlugin(ScrollTrigger);
 
     export default {
         components: {
             PlanComp,
-            FooterComp
+            FooterComp,
         },
         data() {
             return {
                 planCards: {},
-                cartCards: [],
             }
         },
         mounted: function() {
             this.planCards = plans;
             this.animate();
+        },
+        computed: {
+            ...mapGetters(["totalCart"]),
         },
         methods: {
             animate() {
@@ -72,33 +74,9 @@
                     delay: .8,
                     duration: .8,
                 });
-                gsap.to(".footer__up", {
-                    scrollTrigger: {
-                        trigger: ".footer__up", 
-                        start: "-50px center",
-                        end: "200px",
-                    },
-                    opacity: 1,
-                    scale: 1,
-                    duration: .6,
-                });
-                gsap.to([".footer__mid", ".mid__list-wrapper", ".footer__bottom"], {
-                    scrollTrigger: {
-                        trigger: ".footer__mid", 
-                        start: "-50px center",
-                        end: "200px",
-                    },
-                    opacity: 1,
-                    scale: 1,
-                    duration: .6,
-                    delay: .6,
-                });
             },
-            createCart() {
-                console.log(cardData.typeProp);
-            }
-        }
-    }
+        },
+    };
 </script>
 
 <template>

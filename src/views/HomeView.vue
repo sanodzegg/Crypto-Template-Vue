@@ -2,9 +2,9 @@
     import { gsap } from "gsap";
     import { ScrollTrigger } from "gsap/ScrollTrigger";
     import CompanyPh from '@/components/CompanyPh.vue';
-    import AboutCrypto from "@/components/AboutCrypto.vue";
-    import CryptoSub from "@/components/CryptoSub.vue";
-    import UsersSwiper from "@/components/UsersSwiper.vue";
+    import AboutCrypto from "@/components/Home/AboutCrypto.vue";
+    import CryptoSub from "@/components/Home/CryptoSub.vue";
+    import UsersSwiper from "@/components/Home/UsersSwiper.vue";
     import FooterComp from "@/components/FooterComp.vue";
     
     gsap.registerPlugin(ScrollTrigger);
@@ -149,27 +149,6 @@
                     y: 0,
                     opacity: 1,
                     duration: 1,
-                });
-                gsap.to(".footer__up", {
-                    scrollTrigger: {
-                        trigger: ".footer__up", 
-                        start: "-50px center",
-                        end: "200px",
-                    },
-                    opacity: 1,
-                    scale: 1,
-                    duration: .6,
-                });
-                gsap.to([".footer__mid", ".mid__list-wrapper", ".footer__bottom"], {
-                    scrollTrigger: {
-                        trigger: ".footer__mid", 
-                        start: "-50px center",
-                        end: "200px",
-                    },
-                    opacity: 1,
-                    scale: 1,
-                    duration: .6,
-                    delay: .6,
                 });
             }
         }

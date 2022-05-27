@@ -1,24 +1,3 @@
-<template>
-    <section class="swiper__section">
-        <div class="swiper__heading">
-            <h1>What our users say?</h1>
-            <button>download app</button>
-        </div>
-        <swiper class="swiper__main"
-        :modules="modules"
-        :slides-per-view="2"
-        :autoplay='{
-            "delay": 3500,
-            "disableOnInteraction": false
-        }'
-        :space-between="25"
-        :pagination="{ clickable: true }"
-        >
-            <swiper-slide v-for="i in users" :key="i"><UserComment :picture="i.picture" :firstName="i.firstName" :lastName="i.lastName" /></swiper-slide>
-        </swiper>
-    </section>
-</template>
-
 <script>
     import SwiperCore, { Autoplay, Pagination, A11y } from 'swiper';
     import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -54,7 +33,7 @@
                 },
                 opacity: 1,
                 duration: 1,
-            })
+            });
         },
         setup() {
                 return {
@@ -63,6 +42,27 @@
             },
         };
 </script>
+
+<template>
+    <section class="swiper__section">
+        <div class="swiper__heading">
+            <h1>What our users say?</h1>
+            <button>download app</button>
+        </div>
+        <swiper class="swiper__main"
+        :modules="modules"
+        :slides-per-view="2"
+        :autoplay='{
+            "delay": 3500,
+            "disableOnInteraction": false
+        }'
+        :space-between="25"
+        :pagination="{ clickable: true }"
+        >
+            <swiper-slide v-for="i in users" :key="i"><UserComment :picture="i.picture" :firstName="i.firstName" :lastName="i.lastName" /></swiper-slide>
+        </swiper>
+    </section>
+</template>
 
 <style>
     .swiper__section {

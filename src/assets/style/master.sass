@@ -49,6 +49,24 @@ body
             .navbar__logo:hover
                 transform: scale(.97)
                 cursor: pointer
+        .navbar__search
+            input
+                font-family: Poppins, sans-serif
+                padding: 15px 50px 15px 20px
+                border-radius: 40px
+                color: $mainfont
+                outline: unset
+                border: unset
+                background: url("@/assets/aboutview/transparent.svg") $btnhover no-repeat right
+                background-size: 10%
+                background-position-x: 93%
+                transition: all .3s ease-in-out
+            input:hover
+                transform: scale(1.05)
+            ::placeholder
+                color: $mainfont
+                opacity: .5
+                font-weight: normal
         .navbar__r
             @include flex-center
             span, button
@@ -200,12 +218,31 @@ body
             bottom: 5px
             background-color: #6639E4
             cursor: pointer
-    .about__top
+    .about__top, .tokens__top
         width: 100%
         max-width: 1200px
         margin: 0 auto
         margin-bottom: 116px
-        .about__top-header
+        table
+            font-family: Poppins, sans-serif
+            margin-top: 85px
+            thead
+                tr
+                    th
+                        color: #FFFFFF
+                        font-size: $fontdef
+                        padding: 40px 10px
+            tbody
+                tr
+                    td
+                        font-size: $fontdef
+                        font-weight: bold
+                        padding: 40px 0
+                    .table__Desc
+                        color: $mainfont
+                        font-weight: normal
+                        font-size: $btnfont
+        .about__top-header, .tokens__top-header
             text-align: center
             h1
                 font-size: $fontbig
@@ -405,3 +442,136 @@ body
         margin: 0 auto
         padding: 40px 0 75px 0
         @include flex-between
+    .display__cart
+        opacity: 0
+        position: fixed
+        background-color: #1310294c
+        top: 0
+        left: 0
+        width: 100vw
+        height: 100vh
+        z-index: 1
+        transition: all .5s ease-in-out
+        .cart__side
+            position: fixed
+            background-color: #282555
+            width: 0
+            height: 100vh
+            right: 0
+            top: 0
+            padding: 20px 40px
+            .cart__side-controls
+                padding: 10px 0px
+                @include flex-between
+                h4
+                    color: $defaultfont
+                    font-size: 22px
+                button
+                    outline: none
+                    border: none
+                    background-color: transparent
+                    font-size: 22px
+                    padding: 0
+                    cursor: pointer
+            .cart__header
+                @include flex-between
+                padding-top: 20px
+                h3
+                    font-size: 24px
+                    color: $defaultfont
+                    text-transform: uppercase
+                    cursor: pointer
+                    transition: all .3s ease-in-out
+                h3:hover
+                    color: $mainbtn
+                span
+                    text-decoration: underline
+                    font-size: $fontdef
+                    cursor: pointer
+                    transition: all .3s ease-in-out
+                span:hover
+                    color: $mainbtn
+            p
+                font-size: $fontdef
+            .cart__price, strong
+                color: $defaultfont
+                font-weight: bold
+            .cart__side-down
+                position: absolute
+                bottom: 8%
+                width: 447px
+                .cart__side-subtotal
+                    .subtotal__wrapper
+                        @include flex-between
+                        margin-bottom: 16px
+                        p
+                            font-size: $fontdef
+                        .total
+                            font-weight: bold
+                            font-size: 23px
+                            color: $defaultfont
+                    button
+                        @include default-button
+                        margin: 0
+                        padding: 27px 32px
+                        border-radius: 80px
+                        font-size: $btnfont
+                        font-weight: 700
+                        text-transform: uppercase
+                        width: 100%
+                        transition: all .5s
+                    button:hover
+                        transition: .3s
+                        background-color: $btnhover
+                        transform: scale(.97)
+    .token__display
+        width: 1200px
+        max-width: 100%
+        margin: 0 auto
+        @include flex-between
+        .token__info
+            @include flex-between
+            flex-direction: column
+            align-items: flex-start
+            .info__row
+                @include flex-evenly
+                h1
+                    font-size: $fontbig
+                    color: $defaultfont
+                    margin-left: 20px
+                img
+                    max-width: 80px
+                .token__initials
+                    background-color: $btnhover
+                    margin-left: 5px
+                    padding: 7px 11px
+                    border-radius: 25px
+                    font-size: $navfont
+                    text-transform: uppercase
+                    font-weight: bold
+                    margin-left: 10px
+                    margin-top: 10px
+                    align-self: flex-start
+            .token__desc
+                max-width: 455px
+                cursor: pointer
+                padding-right: 15px
+            .desc
+                margin-top: 20px
+                margin-bottom: 20px
+            .active
+                max-height: 250px
+                overflow-y: scroll
+            .links
+                margin-bottom: 50px
+                gap: 30px
+                a
+                    transition: all .3s
+                a:hover
+                    color: $mainbtn
+            .market
+                gap: 30px
+                .market__title
+                    margin-bottom: 20px
+                .market__digits
+                    font-weight: bold

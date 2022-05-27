@@ -1,5 +1,4 @@
 <script>
-    import { reactive } from 'vue';
     export default {
         props: {
             type: String,
@@ -7,15 +6,13 @@
             description: String,
             features: Object,
         },
-        methods: {
-            getCartInfo() {
-                cardData.typeProp = this.type;
+        data() {
+            return {
             }
+        },
+        methods: {
         }
     }
-    export const cardData = reactive({
-        typeProp: String
-    });
 </script>
 <template>
     <div class="plan__card">
@@ -33,7 +30,7 @@
             </ul>
         </div>
         <div class="plan__buttons">
-            <button class="plan__adc" @click="getCartInfo()">add to cart</button>
+            <button class="plan__adc" @click="$store.commit('transferCart', this.type)">add to cart</button>
             <button class="plan__bn">buy</button>
         </div>
     </div>

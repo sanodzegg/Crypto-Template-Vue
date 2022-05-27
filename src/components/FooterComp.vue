@@ -1,3 +1,35 @@
+<script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+    gsap.registerPlugin(ScrollTrigger);
+
+    export default {
+        mounted: function() {
+            gsap.to(".footer__up", {
+                scrollTrigger: {
+                    trigger: ".footer__up", 
+                    start: "-50px center",
+                    end: "200px",
+                },
+                opacity: 1,
+                scale: 1,
+                duration: .6,
+            });
+            gsap.to([".footer__mid", ".mid__list-wrapper", ".footer__bottom"], {
+                scrollTrigger: {
+                    trigger: ".footer__mid", 
+                    start: "-50px center",
+                    end: "200px",
+                },
+                opacity: 1,
+                scale: 1,
+                duration: .6,
+                delay: .6,
+            });
+        }
+    }
+</script>
+
 <template>
     <div class="footer__wrapper">
         <div class="footer__up">

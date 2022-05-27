@@ -6,14 +6,14 @@
     <div class="mid__grid-wrapper">
         <div class="grid__child col1">
             <div class="svg__wrapper">
-                <img src="../assets/swap.svg" alt="send and receive icon">
+                <img src="../../assets/swap.svg" alt="send and receive icon">
             </div>
             <h1>send & receive</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aene.</p>
         </div>
         <div class="grid__child col2">
             <div class="svg__wrapper">
-                <img src="../assets/wallet.svg" alt="wallet icon">
+                <img src="../../assets/wallet.svg" alt="wallet icon">
             </div>
             <h1>trading charts</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aene.</p>
@@ -21,18 +21,18 @@
         <div class="grid__child main col3">
             <h1>iOS & Android App</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In amet, morbi non at sed neque.</p>
-            <img src="../assets/img/phone2.png" alt="mobile app image" class="mainchild__img">
+            <img src="../../assets/img/phone2.png" alt="mobile app image" class="mainchild__img">
         </div>
         <div class="grid__child col4">
             <div class="svg__wrapper">
-                <img src="../assets/chart.svg" alt="chart icon">
+                <img src="../../assets/chart.svg" alt="chart icon">
             </div>
             <h1>100% secure wallet</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aene.</p>
         </div>
         <div class="grid__child col5">
             <div class="svg__wrapper">
-                <img src="../assets/trade.svg" alt="trading icon">
+                <img src="../../assets/trade.svg" alt="trading icon">
             </div>
             <h1>real time trading</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aene.</p>

@@ -2,6 +2,8 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
 import PricingView from "../views/PricingView.vue";
+import TokensView from "../views/TokensView.vue";
+import DisplayToken from "../components/Tokens/DisplayToken.vue";
 
 const routes = [
   {
@@ -18,6 +20,16 @@ const routes = [
     path: "/pricing",
     name: "pricing",
     component: PricingView,
+  },
+  {
+    path: "/tokens",
+    name: "tokens",
+    component: TokensView,
+  },
+  {
+    path: "/tokens/:id",
+    name: "Coin",
+    component: DisplayToken,
   },
 ];
 

@@ -1,27 +1,27 @@
 <template>
     <section class="mid__subsect">
         <div class="subsect__l">
-            <img id="midPhone1" src="../assets/img/phone3.png" alt="mobile app picture">
-            <img id="midPhone2" src="../assets/img/phone4.png" alt="mobile app crypto transaction picture">
+            <img id="midPhone1" src="../../assets/img/phone3.png" alt="mobile app picture">
+            <img id="midPhone2" src="../../assets/img/phone4.png" alt="mobile app crypto transaction picture">
         </div>
         <div class="subsect__r">
             <h1>A crypto wallet from the future</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit non neque orci amet, amet consectetur eget suspendisse in. Adipiscing vitae dignissim facilisi ut.</p>
             <div class="subsect__r-wrapper">
                 <div class="subsect__svg-wrapper">
-                    <img src="../assets/fees.svg" alt="fees logo">
+                    <img src="../../assets/fees.svg" alt="fees logo">
                 </div>
                 <p>Lowest fees in market</p>
             </div>
             <div class="subsect__r-wrapper">
                 <div class="subsect__svg-wrapper">
-                    <img src="../assets/transactions.svg" alt="transaction logo">
+                    <img src="../../assets/transactions.svg" alt="transaction logo">
                 </div>
                 <p>Fast and secure transactions</p>
             </div>
             <div class="subsect__r-wrapper">
                 <div class="subsect__svg-wrapper">
-                    <img src="../assets/encryption.svg" alt="encryption logo">
+                    <img src="../../assets/encryption.svg" alt="encryption logo">
                 </div>
                 <p>256-bit secure encryption</p>
             </div>

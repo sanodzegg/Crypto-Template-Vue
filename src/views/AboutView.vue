@@ -4,7 +4,7 @@
     gsap.registerPlugin(ScrollTrigger);
     import { mapActions, mapGetters } from "vuex";
 
-    import TeamComp from "../components/AboutTeamComp.vue";
+    import TeamComp from "../components/About/AboutTeamComp.vue";
     import CompanyPh from "@/components/CompanyPh.vue";
     import FooterComp from "@/components/FooterComp.vue";
 
@@ -18,7 +18,7 @@
             TeamComp,
             CompanyPh,
             FooterComp
-},
+        },
         computed: {
             ...mapGetters(["aboutUsers"]),
         },
@@ -147,27 +147,6 @@
                     opacity: 1,
                     scale: 1,
                 });
-                gsap.to(".footer__up", {
-                    scrollTrigger: {
-                        trigger: ".footer__up", 
-                        start: "-50px center",
-                        end: "200px",
-                    },
-                    opacity: 1,
-                    scale: 1,
-                    duration: .6,
-                });
-                gsap.to([".footer__mid", ".mid__list-wrapper", ".footer__bottom"], {
-                    scrollTrigger: {
-                        trigger: ".footer__mid", 
-                        start: "-50px center",
-                        end: "200px",
-                    },
-                    opacity: 1,
-                    scale: 1,
-                    duration: .6,
-                    delay: .6,
-                });
             }
         },
         mounted:function() {
@@ -183,7 +162,6 @@
             <h1 id="aboutTopHeader">About Crypto</h1>
             <p id="aboutTopUT">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aenean dis placerat. Scelerisque imperdiet vitae dolor non aliquam. Malesuada.</p>
         </div>
-
         <div class="about__top-wrapper">
             <div class="about__top-heading">
                 <h2>What drives Crypto?</h2>
