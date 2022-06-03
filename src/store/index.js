@@ -8,7 +8,7 @@ export default createStore({
     cartArr: [],
     displayCart: false,
     cryptoCoins: [],
-    coinID: "",
+    similarCoins: [],
   },
   mutations: {
     setUsers(state, users) {
@@ -40,8 +40,8 @@ export default createStore({
     setCrypto(state, cryptoCoins) {
       state.cryptoCoins = cryptoCoins;
     },
-    setID(state, id) {
-      state.coinID = id;
+    setSimilar(state, similarCoins) {
+      state.similarCoins.push(similarCoins);
     },
   },
   actions: {
@@ -59,8 +59,14 @@ export default createStore({
         context.commit("setCrypto", res.data);
       });
     },
-    updateID(context, id) {
-      sessionStorage.setItem("coinID", id);
+    getSimilar(context, catchPhrase) {
+      axios.get("https://api.coingecko.com/api/v3/coins/list").then((res) => {
+        res.data.forEach((e) => {
+          if (e.id.includes(catchPhrase)) {
+            context.commit("setSimilar", e.id);
+          }
+        });
+      });
     },
   },
   getters: {
@@ -84,15 +90,14 @@ export default createStore({
     itemsInCart(state) {
       return state.cartArr.length;
     },
-
     getCoins(state) {
       return state.cryptoCoins.splice(0, 5);
     },
     getCoinInfo(state) {
       return state.coinInfo;
     },
-    getID() {
-      return sessionStorage.getItem("coinID");
+    getSimilar(state) {
+      return state.similarCoins;
     },
   },
 });

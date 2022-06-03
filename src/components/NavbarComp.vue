@@ -1,12 +1,24 @@
 <script>
-    import { mapGetters } from "vuex";
+    import { mapActions, mapGetters } from "vuex";
     import DisplayCart from "@/components/Pricing/DisplayCart.vue"
+
     export default {
+        data() {
+            return {
+                searchTerm: "",
+            }
+        },
         components: {
             DisplayCart
         },
         computed: {
             ...mapGetters(["itemsInCart"]),
+        },
+        methods: {
+            ...mapActions(["updateID"]),
+            reset() {
+                this.searchTerm = ""
+            }
         },
     }
 </script>
@@ -25,14 +37,21 @@
             </ul>
         </div>
         <div class="navbar__search">
-            <input type="text" placeholder="Search for crypto coins">
+            <input type="text" placeholder="Search for crypto coins" v-model="searchTerm" @keyup.enter="$router.push({path: `/tokens/${searchTerm}`}); reset();">
         </div>
         <div class="navbar__r">
             <span @click="$store.commit('openCart')">cart ({{itemsInCart}})</span>
             <button>download app</button>
         </div>
+        <div class="navbar__burger">
+            <div class="burger__menu-wrapper">
+                <div class="icon__row"></div>
+                <div class="icon__row"></div>
+                <div class="icon__row"></div>
+            </div>
+        </div>
     </nav>
-    <router-view />
+    <router-view :key="$route.path"/>
     <section v-if="$store.state.displayCart" class="display__cart">
         <DisplayCart />
     </section>

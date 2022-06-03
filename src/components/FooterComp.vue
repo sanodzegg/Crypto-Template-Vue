@@ -81,16 +81,16 @@
                         <router-link to="/"><li>Home</li></router-link>
                         <router-link to="/about"><li>About</li></router-link>
                         <router-link to="/pricing"><li>Pricing</li></router-link>
-                        <router-link to="/pricingsingle"><li>Pricing Single</li></router-link>
-                        <router-link to="/contact"><li>Contact</li></router-link>
+                        <router-link to="/"><li>Pricing Single</li></router-link>
+                        <router-link to="/"><li>Contact</li></router-link>
                     </ul>
                     <ul>
-                        <router-link to="/blog"><li>Blog</li></router-link>
-                        <router-link to="/blogpost"><li>Blog Post</li></router-link>
+                        <router-link to="/"><li>Blog</li></router-link>
+                        <router-link to="/"><li>Blog Post</li></router-link>
                         <router-link to="/tokens"><li>Tokens</li></router-link>
-                        <router-link to="/tokensingle"><li>Token Single</li></router-link>
+                        <router-link to="/"><li>Token Single</li></router-link>
                     </ul>
-                </div>
+                </div>  
             </div>
             <div class="mid__r">
                 <div class="dl__wrapper">

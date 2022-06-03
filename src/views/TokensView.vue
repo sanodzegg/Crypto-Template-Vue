@@ -59,7 +59,7 @@
         },
         methods: {
           ...mapActions(["updateID"]),
-        }
+        },
     }
 </script>
 
@@ -83,7 +83,7 @@
                 <td data-label="Name">
                     <div class="tableName__wrapper">
                         <img v-bind:src="i.image.small" class="name__logo">
-                        <router-link :to="`/tokens/${i.name}`"><p @click="this.updateID(i.id)">{{ i.name }}</p></router-link>
+                        <router-link :to="`/tokens/${i.id}`"><p>{{ i.name }}</p></router-link>
                         <span class="initials">{{ i.symbol }}</span>
                     </div>
                 </td>
@@ -94,6 +94,7 @@
             </tbody>
         </table>
     </section>
+    <router-view :key="$route.path"/>
     <section class="footer__section">
         <FooterComp />
     </section>

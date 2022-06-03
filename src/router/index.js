@@ -4,6 +4,7 @@ import AboutView from "../views/AboutView.vue";
 import PricingView from "../views/PricingView.vue";
 import TokensView from "../views/TokensView.vue";
 import DisplayToken from "../components/Tokens/DisplayToken.vue";
+import ErrTokens from "../components/Tokens/ErrTokens.vue";
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: "/tokens/:id",
     name: "Coin",
     component: DisplayToken,
+  },
+  {
+    path: "/tokens/notFound/:statusCode",
+    name: "TokenErr",
+    component: ErrTokens,
   },
 ];
 
